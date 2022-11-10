@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Config {
 
-    private static final String ITEMS_URL = "http://192.168.42.41:80/kuzasaccov3/";
+    private static final String ITEMS_URL = "http://192.168.42.41:80/";
 
     public static final String VIEW_ITEMS_URL = ITEMS_URL+"masterfetch?type=items";
 
@@ -18,7 +18,7 @@ public class Config {
         return decimalFormat.format(d);
     }
 
-    private static final String JSON_URL = "https://www.kuzasystems.com/cartapp/apis/";
+    private static final String JSON_URL = "";
 
     public static final String POST_PAYMENT = JSON_URL+"post_payment.php";
 }
