@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="2dp"
+    android:id="@+id/item_card_view"
+    app:cardCornerRadius="3dp"
+    android:padding="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/imv_item"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:contentDescription="@string/item_image_view"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_name"
+            android:textStyle="bold"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tv_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_price"
+            android:textStyle="bold"
+            style="@style/TextAppearance.AppCompat.Body1"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

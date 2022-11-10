@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhiteDarker"
+    app:behavior_hideable="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:id="@+id/layout_post_payment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_payment_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_margin="1dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:theme="@style/MaterialComponents">
+
+                <!--android:maxLength="13"-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_payment_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/tv_payment_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Options"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="1dp"
+                    android:layout_alignParentLeft="true" />
+
+                <Spinner
+                    android:id="@+id/spn_payment_options"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/payment_options"
+                    android:layout_toEndOf="@+id/tv_payment_info"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/tv_payment_info"
+                    android:layout_alignParentRight="true" />
+
+
+            </RelativeLayout>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_post_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post_payment"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:textColor="@android:color/white"
+                android:padding="5dp"
+                android:theme="@style/ButtonsTheme"
+                app:icon="@drawable/ic_pay"
+                app:iconTint="@android:color/white"
+                android:textAllCaps="false"/>
+
+            <ProgressBar
+                android:id="@+id/pb_post_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/view_items">
+
+
+<!--    NavigationUI uses the destination labels from this -->
+<!--    navigation graph to keep the title of the top app bar -->
+<!--    up-to-date.-->
+    <fragment
+        android:id="@+id/view_items"
+        android:name="manu.apps.cartv7.ui.main.fragments.ViewItemsFragment"
+        android:label="View Items"
+        tools:layout="@layout/view_items_fragment">
+
+        <action
+            android:id="@+id/action_view_products_to_cart"
+            app:destination="@id/cart" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/cart"
+        android:name="manu.apps.cartv7.ui.main.fragments.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/cart_fragment">
+
+    </fragment>
+
+
+</navigation>
